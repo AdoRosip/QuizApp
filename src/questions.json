@@ -1,0 +1,257 @@
+{
+    "JavaScript": [
+    {
+      "questionId": 1,
+      "question": "What is the call stack in JavaScript?",
+      "answers": [
+        "The call stack is a data structure that keeps track of function calls in a program",
+        "The call stack is a data structure that keeps track of variable assignments in a program",
+        "The call stack is a data structure that keeps track of event listeners in a program"
+      ],
+      "correctAnswer": "The call stack is a data structure that keeps track of function calls in a program"
+    },
+    {
+      "questionId": 2,
+      "question": "What is the difference between null and undefined?",
+      "answers": [
+        "Null is the absence of a value, while undefined is a variable that has not been assigned a value",
+        "Undefined is the absence of a value, while null is a variable that has not been assigned a value",
+        "They are the same thing"
+      ],
+      "correctAnswer": "Null is the absence of a value, while undefined is a variable that has not been assigned a value"
+    },
+    {
+      "questionId": 3,
+      "question": "What is hoisting in Javascript?",
+      "answers": [
+        "The process of moving all variable and function declarations to the top of their respective scopes",
+        "The process of moving all variable and function declarations to the bottom of their respective scopes",
+        "The process of removing all variable and function declarations from their respective scopes"
+      ],
+      "correctAnswer": "The process of moving all variable and function declarations to the top of their respective scopes"
+    },
+    {
+      "questionId": 4,
+      "question": "What is the difference between let and var in Javascript?",
+      "answers": [
+        "let has block scope, while var has function scope",
+        "let has function scope, while var has block scope",
+        "They are the same thing"
+      ],
+      "correctAnswer": "let has block scope, while var has function scope"
+    },
+    {
+      "questionId": 5,
+      "question": "What is the result of '5' + 3?",
+      "answers": [
+        "53",
+        "8",
+        "NaN"
+      ],
+      "correctAnswer": "53"
+    },
+    {
+      "questionId": 6,
+      "question": "What is a closure in Javascript?",
+      "answers": [
+        "A function that returns another function",
+        "The combination of a function and the lexical environment in which it was declared",
+        "The process of returning a value from a function"
+      ],
+      "correctAnswer": "The combination of a function and the lexical environment in which it was declared"
+    },
+    {
+      "questionId": 7,
+      "question": "What is the difference between == and === in Javascript?",
+      "answers": [
+        "== compares values, while === compares both values and types",
+        "== compares types, while === compares values",
+        "They are the same thing"
+      ],
+      "correctAnswer": "== compares values, while === compares both values and types"
+    },
+    {
+      "questionId": 8,
+      "question": "What is the difference between const and let in Javascript?",
+      "answers": [
+        "const cannot be reassigned, while let can",
+        "let cannot be reassigned, while const can",
+        "They are the same thing"
+      ],
+      "correctAnswer": "const cannot be reassigned, while let can"
+    },
+    {
+      "questionId": 9,
+      "question": "What is the result of 3 * '3'?",
+      "answers": [
+        "9",
+        "33",
+        "NaN"
+      ],
+      "correctAnswer": "9"
+    },
+{
+      "questionId": 10,
+      "question": "What is a callback function in JavaScript?",
+      "answers": [
+        "A callback function is a function that is passed as an argument to another function and is executed after some event or action",
+        "A callback function is a function that is called before another function",
+        "A callback function is a function that is called at the same time as another function"
+      ],
+      "correctAnswer": "A callback function is a function that is passed as an argument to another function and is executed after some event or action"
+    },
+ {
+      "questionId": 11,
+      "question": "What is the difference between callbacks and promises in JavaScript?",
+      "answers": [
+        "Callbacks are functions that are executed after an asynchronous operation completes, while promises represent the result of an asynchronous operation that may not have completed yet",
+        "Callbacks and promises are the same thing",
+        "Callbacks are used for synchronous operations, while promises are used for asynchronous operations"
+      ],
+      "correctAnswer": "Callbacks are functions that are executed after an asynchronous operation completes, while promises represent the result of an asynchronous operation that may not have completed yet"
+    },
+     {
+      "questionId": 12,
+      "question": "What is an async/await function in JavaScript?",
+      "answers": [
+        "An async/await function is a function that allows for synchronous-style coding with asynchronous operations",
+        "An async/await function is a function that executes synchronously",
+        "An async/await function is a function that only accepts synchronous operations"
+      ],
+      "correctAnswer": "An async/await function is a function that allows for synchronous-style coding with asynchronous operations"
+    },
+     {
+      "questionId": 13,
+      "question": "What are closures in JavaScript?",
+      "answers": [
+        "Closures are functions that have access to variables in their parent function's scope, even after the parent function has returned",
+        "Closures are functions that execute only once when they are called",
+        "Closures are functions that can be executed concurrently with other functions"
+      ],
+      "correctAnswer": "Closures are functions that have access to variables in their parent function's scope, even after the parent function has returned"
+    }
+
+],
+    "React": [
+    {
+      "questionId": 1,
+      "question": "What is the purpose of the shouldComponentUpdate lifecycle method in React?",
+      "answers": [
+        "To optimize performance by preventing unnecessary re-renders",
+        "To update the component's state",
+        "To define the component's props"
+      ],
+      "correctAnswer": "To optimize performance by preventing unnecessary re-renders"
+    },
+    {
+      "questionId": 2,
+      "question": "What is the difference between React's setState() and replaceState() methods?",
+      "answers": [
+        "setState() merges the new state with the old state, while replaceState() completely replaces the old state with the new state",
+        "replaceState() merges the new state with the old state, while setState() completely replaces the old state with the new state",
+        "There is no difference between the two methods"
+      ],
+      "correctAnswer": "setState() merges the new state with the old state, while replaceState() completely replaces the old state with the new state"
+    },
+    {
+      "questionId": 3,
+      "question": "What is the purpose of React's key prop?",
+      "answers": [
+        "To help React identify which items have changed, added, or removed in a list",
+        "To define a unique identifier for each component instance",
+        "To specify a default value for a prop"
+      ],
+      "correctAnswer": "To help React identify which items have changed, added, or removed in a list"
+    },
+    {
+      "questionId": 4,
+      "question": "What is the purpose of React's PureComponent?",
+      "answers": [
+        "To improve performance by automatically implementing shouldComponentUpdate() for shallow prop and state comparisons",
+        "To render components using a different rendering engine",
+        "To manage global state in a React application"
+      ],
+      "correctAnswer": "To improve performance by automatically implementing shouldComponentUpdate() for shallow prop and state comparisons"
+    },
+    {
+      "questionId": 5,
+      "question": "What is the difference between a presentational component and a container component in React?",
+      "answers": [
+        "Presentational components are concerned with how things look, while container components are concerned with how things work",
+        "Presentational components manage state, while container components do not",
+        "There is no difference between the two types of components"
+      ],
+      "correctAnswer": "Presentational components are concerned with how things look, while container components are concerned with how things work"
+    },
+    {
+      "questionId": 6,
+      "question": "What is the virtual DOM in React?",
+      "answers": [
+        "A JavaScript object that represents the actual DOM",
+        "A separate instance of the actual DOM",
+        "A tool used for debugging in React"
+      ],
+      "correctAnswer": "A JavaScript object that represents the actual DOM"
+    },
+    {
+      "questionId": 7,
+      "question": "What is JSX?",
+      "answers": [
+        "A syntax extension for JavaScript that allows for XML-like code to be written in JavaScript",
+        "A JavaScript library for building user interfaces",
+        "A tool used for unit testing in React"
+      ],
+      "correctAnswer": "A syntax extension for JavaScript that allows for XML-like code to be written in JavaScript"
+    },
+    {
+      "questionId": 8,
+      "question": "What is the purpose of the render method in React?",
+      "answers": [
+        "To render the component to the screen",
+        "To update the component's state",
+        "To define the component's props"
+      ],
+      "correctAnswer": "To render the component to the screen"
+    },
+    {
+      "questionId": 9,
+      "question": "What is the difference between state and props in React?",
+      "answers": [
+        "State is managed within the component, while props are passed down from parent components",
+        "Props are managed within the component, while state is passed down from parent components",
+        "They are the same thing"
+      ],
+      "correctAnswer": "State is managed within the component, while props are passed down from parent components"
+    },
+    {
+      "questionId": 10,
+      "question": "What is the purpose of componentDidMount in React?",
+      "answers": [
+        "To execute code after the component has mounted to the DOM",
+        "To update the component's state",
+        "To define the component's props"
+      ],
+      "correctAnswer": "To execute code after the component has mounted to the DOM"
+    },
+    {
+      "questionId": 11,
+      "question": "What is the purpose of shouldComponentUpdate in React?",
+      "answers": [
+        "To optimize performance by preventing unnecessary re-renders",
+        "To update the component's state",
+        "To define the component's props"
+      ],
+      "correctAnswer": "To optimize performance by preventing unnecessary re-renders"
+    },
+    {
+      "questionId": 12,
+      "question": "What is the difference between controlled and uncontrolled components in React?",
+      "answers": [
+        "Controlled components have their state managed by React, while uncontrolled components have their state managed by the DOM",
+        "Uncontrolled components have their state managed by React, while controlled components have their state managed by the DOM",
+        "They are the same thing"
+      ],
+      "correctAnswer": "Controlled components have their state managed by React, while uncontrolled components have their state managed by the DOM"
+    }
+  ]
+}
