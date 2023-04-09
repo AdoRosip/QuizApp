@@ -1,9 +1,11 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { MyContext } from "../context"
 interface IntroProps {
   setLanguage: (event: React.ChangeEvent<HTMLSelectElement>) => void
-  setIsPlaying: () => void
 }
-export const Intro = ({ setLanguage, setIsPlaying }: IntroProps) => {
+export const Intro = ({ setLanguage }: IntroProps) => {
+  const { gameState, setGameState } = useContext(MyContext)
+
   return (
     <div className="intro-page">
       <h1 className="intro-text">
@@ -26,7 +28,12 @@ export const Intro = ({ setLanguage, setIsPlaying }: IntroProps) => {
             )
           })}
         </select>
-        <button className="start-button" onClick={setIsPlaying}>
+        <button
+          className="start-button"
+          onClick={() => {
+            setGameState("playing")
+          }}
+        >
           Start Quiz
         </button>
       </div>

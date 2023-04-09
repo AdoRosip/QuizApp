@@ -1,13 +1,6 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import questions from "../questions.json"
-// type Questions = {
-//   [key: string]: {
-//     questionId: number
-//     question: string
-//     answers: string[]
-//     correctAnswer: string
-//   }[]
-// }
+import { MyContext } from "../context"
 
 interface InfoBarProps {
   selectedLanguage: "JavaScript" | "React"
@@ -22,14 +15,18 @@ export const InfoBar = ({
 }: InfoBarProps) => {
   const numberOfQuestions = questions[selectedLanguage]
   const [time, setTime] = useState(0)
+  const { gameState, setGameState } = useContext(MyContext)
+
   useEffect(() => {
     let interval: number
-    if (isPlaying) {
+    if (gameState === "playing") {
       interval = setInterval(() => {
         setTime((prevTime) => prevTime + 10)
       }, 10)
     }
-    return () => clearInterval(interval)
+    return () => {
+      clearInterval(interval)
+    }
   }, [isPlaying])
 
   function formatTime(time: number): string {
@@ -39,8 +36,15 @@ export const InfoBar = ({
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`
   }
 
+  const checkGameState = () => {
+    if (currentQuestionId === numberOfQuestions.length) {
+      setGameState("finished")
+    }
+  }
+
   useEffect(() => {
-    console.log(currentQuestionId)
+    console.log(currentQuestionId, numberOfQuestions.length)
+    checkGameState()
   }, [currentQuestionId])
 
   return (

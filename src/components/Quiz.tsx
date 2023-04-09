@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import questions from "../questions.json"
 // interface questionFormat {
 //   questionId: number
@@ -10,12 +10,14 @@ interface QuizProps {
   selectedLanguage: string
   currentQuestionId: number
   setCurrentQuestionId: (id: number) => void
+  setGameScore: (correct: number, incorrect: number) => void
 }
 
 export const Quiz = ({
   selectedLanguage,
   currentQuestionId,
   setCurrentQuestionId,
+  setGameScore,
 }: QuizProps) => {
   const question =
     selectedLanguage === "JavaScript"
@@ -24,14 +26,14 @@ export const Quiz = ({
   const [selectedAnswer, setSelectedAnswer] = useState<
     number | string | undefined
   >(undefined)
-  const [correctAnswer, setCorrectAnswer] = useState<number>(0)
-  const [wrongAnswers, setWrongAnswers] = useState<number>(0)
+  // const [correctAnswer, setCorrectAnswer] = useState<number>(0)
+  // const [wrongAnswers, setWrongAnswers] = useState<number>(0)
   //
   const evaluateAnswer = () => {
     if (selectedAnswer === question.correctAnswer) {
-      setCorrectAnswer((prev) => prev + 1)
+      setGameScore(1, 0)
     } else {
-      setWrongAnswers((prev) => prev + 1)
+      setGameScore(0, 1)
     }
     setCurrentQuestionId(currentQuestionId + 1)
   }
@@ -44,13 +46,12 @@ export const Quiz = ({
       setSelectedAnswer(undefined)
     }
   }
-
   return (
     <div className="quiz-wrapper">
       <div className="quiz-topic">{selectedLanguage}</div>
-      <div className="question">{question.question}</div>
+      <div className="question">{question?.question}</div>
       <div className="answers">
-        {question.answers.map((answer, index) => {
+        {question?.answers?.map((answer, index) => {
           return (
             <div className="button-container" key={answer}>
               <div className="number-of-question">{index + 1}</div>
